@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Events </title>
+</head>
+<body onload="loadBody(this)">
+    <h2 onclick="clicked(this)">Buy one get one free</h2>
+    <div>
+        <input type="text" onfocus="focused(this)" style="background-color: red; border: none; border-radius: 10px;">
+    </div>
+
+
+
+
+    <script>
+        function clicked(head2) {
+            head2.innerHtml = "or access the whole offer"
+        }
+        function focused(foc) {
+            foc.style.backgroundColor = "blue";
+        }
+        function loadBody(body) {
+            const bacArray = ["blue","yellow","orangred","purple","cream"];
+            const randomBac = Math.floor(Math.random() * bacArray.length)
+            body.style.backgroundColor = randomBac;
+        }
+    </script>
+</body>
+</html>
